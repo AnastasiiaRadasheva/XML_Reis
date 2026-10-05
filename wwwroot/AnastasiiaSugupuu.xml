@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<inimene synd="1940">
+  <nimi>Lidia Fedorovna</nimi>
+  <lapsed>
+    <inimene synd="1973">
+      <nimi>Maxim</nimi>
+      <lapsed>
+        <inimene synd="2008"><nimi>Anastasiia</nimi></inimene>
+        <inimene synd="2000"><nimi>Ivan</nimi></inimene>
+        <inimene synd="2007"><nimi>Adriana</nimi></inimene>
+      </lapsed>
+    </inimene>
+    <inimene synd="1981"><nimi>Sofia</nimi></inimene>
+  </lapsed>
+</inimene>

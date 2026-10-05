@@ -1,0 +1,9 @@
+@page
+@model NaideModel
+@{
+    ViewData["Title"] = "Naide";
+}
+
+<div class="row">
+    @Html.Raw(Model.TransformedXml)
+</div>

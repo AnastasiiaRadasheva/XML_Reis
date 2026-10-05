@@ -1,0 +1,9 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    @Html.Raw(Model.TransformedXml)
+</div>

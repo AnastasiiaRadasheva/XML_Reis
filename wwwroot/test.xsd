@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="inimene" type="inimeneTyyp"/>
+  <xs:complexType name="inimeneTyyp">
+    <xs:sequence>
+      <xs:element name="nimi" type="xs:string"/>
+      <xs:element name="lapsed" type="lapsedTyyp" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="synd" type="xs:gYear" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="lapsedTyyp">
+    <xs:sequence>
+      <xs:element name="inimene" type="inimeneTyyp" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
