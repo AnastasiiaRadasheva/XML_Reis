@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="reisid.xslt"?>
+<reisid>
+	<reis id="R001">
+		<suund>
+			<riik>Hispaania</riik>
+			<kestvus>10</kestvus>
+		</suund>
+		<transport>
+			<liik>lennureis</liik>
+			<hind>280</hind>
+		</transport>
+		<majutus>
+			<hotell>Hotel Barcelona</hotell>
+			<hind>600</hind>
+		</majutus>
+		<ekskursioonid>
+			<ekskursioon>
+				<nimi>Sagrada Familia</nimi>
+				<hind>30</hind>
+			</ekskursioon>
+			<ekskursioon>
+				<nimi>Park Güell</nimi>
+				<hind>15</hind>
+			</ekskursioon>
+		</ekskursioonid>
+		<muudKulud>
+			<kirjeldus>Toit ja kohalik transport</kirjeldus>
+			<hind>150</hind>
+		</muudKulud>
+		<reisihind>100</reisihind>
+		<hinnang>9</hinnang>
+	</reis>
+	<reis id="R002">
+		<suund>
+			<riik>Itaalia</riik>
+			<kestvus>7</kestvus>
+		</suund>
+		<transport>
+			<liik>lennureis</liik>
+			<hind>250</hind>
+		</transport>
+		<majutus>
+			<hotell>Hotel Roma</hotell>
+			<hind>520</hind>
+		</majutus>
+		<ekskursioonid>
+			<ekskursioon>
+				<nimi>Colosseum</nimi>
+				<hind>25</hind>
+			</ekskursioon>
+			<ekskursioon>
+				<nimi>Vatikani muuseumid</nimi>
+				<hind>30</hind>
+			</ekskursioon>
+		</ekskursioonid>
+		<muudKulud>
+			<kirjeldus>Toit ja suveniirid</kirjeldus>
+			<hind>120</hind>
+		</muudKulud>
+		<reisihind>90</reisihind>
+		<hinnang>10</hinnang>
+	</reis>
+	<reis id="R003">
+		<suund>
+			<riik>Norra</riik>
+			<kestvus>5</kestvus>
+		</suund>
+		<transport>
+			<liik>laev</liik>
+			<hind>180</hind>
+		</transport>
+		<majutus>
+			<hotell>Fjord Hotel</hotell>
+			<hind>450</hind>
+		</majutus>
+		<ekskursioonid>
+			<ekskursioon>
+				<nimi>Fjordikruiis</nimi>
+				<hind>90</hind>
+			</ekskursioon>
+		</ekskursioonid>
+		<muudKulud>
+			<kirjeldus>Toit</kirjeldus>
+			<hind>100</hind>
+		</muudKulud>
+		<reisihind>70</reisihind>
+		<hinnang>8</hinnang>
+	</reis>
+	<reis id="R004">
+		<suund>
+			<riik>Soome</riik>
+			<kestvus>3</kestvus>
+		</suund>
+		<transport>
+			<liik>laev</liik>
+			<hind>60</hind>
+		</transport>
+		<majutus>
+			<hotell>Helsinki City Hotel</hotell>
+			<hind>220</hind>
+		</majutus>
+		<ekskursioonid>
+			<ekskursioon>
+				<nimi>Suomenlinna</nimi>
+				<hind>20</hind>
+			</ekskursioon>
+		</ekskursioonid>
+		<muudKulud>
+			<kirjeldus>Toit</kirjeldus>
+			<hind>50</hind>
+		</muudKulud>
+		<reisihind>40</reisihind>
+		<hinnang>7</hinnang>
+	</reis>
+	<reis id="R005">
+		<suund>
+			<riik>Kreeka</riik>
+			<kestvus>12</kestvus>
+		</suund>
+		<transport>
+			<liik>lennureis</liik>
+			<hind>320</hind>
+		</transport>
+		<majutus>
+			<hotell>Santorini Resort</hotell>
+			<hind>900</hind>
+		</majutus>
+		<ekskursioonid>
+			<ekskursioon>
+				<nimi>Akropolis</nimi>
+				<hind>20</hind>
+			</ekskursioon>
+			<ekskursioon>
+				<nimi>Santorini paadisõit</nimi>
+				<hind>70</hind>
+			</ekskursioon>
+		</ekskursioonid>
+		<muudKulud>
+			<kirjeldus>Toit ja rendiauto</kirjeldus>
+			<hind>200</hind>
+		</muudKulud>
+		<reisihind>120</reisihind>
+		<hinnang>9</hinnang>
+	</reis>
+	<reis id="R006">
+		<suund>
+			<riik>Saksamaa</riik>
+			<kestvus>4</kestvus>
+		</suund>
+		<transport>
+			<liik>buss</liik>
+			<hind>90</hind>
+		</transport>
+		<majutus>
+			<hotell>Berlin Hotel</hotell>
+			<hind>300</hind>
+		</majutus>
+		<ekskursioonid>
+			<ekskursioon>
+				<nimi>Berliini müür</nimi>
+				<hind>15</hind>
+			</ekskursioon>
+		</ekskursioonid>
+		<muudKulud>
+			<kirjeldus>Toit</kirjeldus>
+			<hind>80</hind>
+		</muudKulud>
+		<reisihind>50</reisihind>
+		<hinnang>6</hinnang>
+	</reis>
+</reisid>
