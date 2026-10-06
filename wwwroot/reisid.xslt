@@ -119,10 +119,10 @@
 					Suund:
 					<!-- Ülesanne 3 -->
 					<ul>
-						<li style="background-color:yellow;">
+						<li style="background-color:#fff5cc;">
 							Riik: <xsl:value-of select="suund/riik"/>
 						</li>
-						<li style="background-color:yellow;">
+						<li style="background-color:#fff5cc;">
 							Kestvus: <xsl:value-of select="suund/kestvus"/> päeva
 						</li>
 					</ul>
