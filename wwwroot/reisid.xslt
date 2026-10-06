@@ -210,4 +210,3 @@
 		</table>
 	</xsl:template>
 </xsl:stylesheet>
-new 
