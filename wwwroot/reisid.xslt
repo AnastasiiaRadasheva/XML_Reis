@@ -13,7 +13,7 @@
 
 		<xsl:for-each select="reisid/reis">
 			<!-- Ülesanne 7 -->
-			<xsl:sort select="hinnang" data-type="number" order="descending"/>
+			<xsl:sort select="suund/kestvus" data-type="number" order="descending"/>
 
 			<!-- Ülesanne 1 -->
 			<h1>
@@ -107,7 +107,7 @@
 			<!-- Ülesanne 6 -->
 			<xsl:for-each select="reisid/reis[starts-with(transport/liik, 'lennu')]">
 				<!-- Ülesanne 7 -->
-				<xsl:sort select="hinnang" data-type="number" order="descending"/>
+				<xsl:sort select="suund/kestvus" data-type="number" order="descending"/>
 				<li>
 					<strong>
 						<xsl:value-of select="suund/riik"/>
@@ -145,7 +145,7 @@
 			</tr>
 			<xsl:for-each select="reisid/reis">
 				<!-- Ülesanne 7 -->
-				<xsl:sort select="hinnang" data-type="number" order="descending"/>
+				<xsl:sort select="suund/kestvus" data-type="number" order="descending"/>
 				<tr>
 					<!-- Ülesanne 9 -->
 					<xsl:if test="position() mod 2 = 1">
