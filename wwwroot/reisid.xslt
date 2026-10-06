@@ -3,7 +3,95 @@
 	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
 	<xsl:template match="/">
-
+		<!-- Ülesanne 8 -->
+		<table border="1">
+			<!-- Ülesanne 10 -->
+			<caption>
+				<strong>Kõikide reiside andmed</strong>
+			</caption>
+			<!-- Ülesanne 10 -->
+			<tr>
+				<th>Nr</th>
+				<th>ID</th>
+				<th>Riik</th>
+				<th>Kestvus (päeva)</th>
+				<th>Transport</th>
+				<th>Transpordi hind</th>
+				<th>Majutus</th>
+				<th>Majutuse hind</th>
+				<th>Ekskursioonid</th>
+				<th>Ekskursioonide hind</th>
+				<th>Muud kulud</th>
+				<th>Muude kulude hind</th>
+				<th>Reisihind</th>
+				<th>Kogumaksumus</th>
+				<th>Hinnang</th>
+			</tr>
+			<xsl:for-each select="reisid/reis">
+				<!-- Ülesanne 7 -->
+				<xsl:sort select="suund/kestvus" data-type="number" order="descending"/>
+				<tr>
+					<!-- Ülesanne 9 -->
+					<xsl:if test="position() mod 2 = 1">
+						<xsl:attribute name="style">background-color:lightblue;</xsl:attribute>
+					</xsl:if>
+					<xsl:if test="position() mod 2 = 0">
+						<xsl:attribute name="style">background-color:lightgreen;</xsl:attribute>
+					</xsl:if>
+					<td>
+						<xsl:value-of select="position()"/>
+					</td>
+					<td>
+						<xsl:value-of select="@id"/>
+					</td>
+					<td>
+						<xsl:value-of select="normalize-space(suund/riik)"/>
+					</td>
+					<td>
+						<xsl:value-of select="suund/kestvus"/>
+					</td>
+					<td>
+						<xsl:value-of select="transport/liik"/>
+					</td>
+					<td>
+						<xsl:value-of select="transport/hind"/> €
+					</td>
+					<td>
+						<xsl:value-of select="majutus/hotell"/>
+					</td>
+					<td>
+						<xsl:value-of select="majutus/hind"/> €
+					</td>
+					<td>
+						<xsl:for-each select="ekskursioonid/ekskursioon">
+							<xsl:value-of select="nimi"/>
+							<xsl:if test="position() != last()">, </xsl:if>
+						</xsl:for-each>
+					</td>
+					<td>
+						<xsl:value-of select="sum(ekskursioonid/ekskursioon/hind)"/> €
+					</td>
+					<td>
+						<xsl:value-of select="muudKulud/kirjeldus"/>
+					</td>
+					<td>
+						<xsl:value-of select="muudKulud/hind"/> €
+					</td>
+					<td>
+						<xsl:value-of select="reisihind"/> €
+					</td>
+					<!-- Ülesanne 5 -->
+					<td>
+						<strong>
+							<xsl:value-of select="reisihind + transport/hind + majutus/hind + sum(ekskursioonid/ekskursioon/hind) + muudKulud/hind"/> €
+						</strong>
+					</td>
+					<td>
+						<xsl:value-of select="hinnang"/>
+					</td>
+				</tr>
+			</xsl:for-each>
+		</table>
 		<p>
 			Reise kokku: <xsl:value-of select="count(reisid/reis)"/>,
 			neist lennureise: <xsl:value-of select="count(reisid/reis[transport/liik = 'lennureis'])"/>
@@ -119,94 +207,6 @@
 			</xsl:for-each>
 		</ul>
 
-		<!-- Ülesanne 8 -->
-		<table border="1">
-			<!-- Ülesanne 10 -->
-			<caption>
-				<strong>Kõikide reiside andmed</strong>
-			</caption>
-			<!-- Ülesanne 10 -->
-			<tr>
-				<th>Nr</th>
-				<th>ID</th>
-				<th>Riik</th>
-				<th>Kestvus (päeva)</th>
-				<th>Transport</th>
-				<th>Transpordi hind</th>
-				<th>Majutus</th>
-				<th>Majutuse hind</th>
-				<th>Ekskursioonid</th>
-				<th>Ekskursioonide hind</th>
-				<th>Muud kulud</th>
-				<th>Muude kulude hind</th>
-				<th>Reisihind</th>
-				<th>Kogumaksumus</th>
-				<th>Hinnang</th>
-			</tr>
-			<xsl:for-each select="reisid/reis">
-				<!-- Ülesanne 7 -->
-				<xsl:sort select="suund/kestvus" data-type="number" order="descending"/>
-				<tr>
-					<!-- Ülesanne 9 -->
-					<xsl:if test="position() mod 2 = 1">
-						<xsl:attribute name="style">background-color:lightblue;</xsl:attribute>
-					</xsl:if>
-					<xsl:if test="position() mod 2 = 0">
-						<xsl:attribute name="style">background-color:lightgreen;</xsl:attribute>
-					</xsl:if>
-					<td>
-						<xsl:value-of select="position()"/>
-					</td>
-					<td>
-						<xsl:value-of select="@id"/>
-					</td>
-					<td>
-						<xsl:value-of select="normalize-space(suund/riik)"/>
-					</td>
-					<td>
-						<xsl:value-of select="suund/kestvus"/>
-					</td>
-					<td>
-						<xsl:value-of select="transport/liik"/>
-					</td>
-					<td>
-						<xsl:value-of select="transport/hind"/> €
-					</td>
-					<td>
-						<xsl:value-of select="majutus/hotell"/>
-					</td>
-					<td>
-						<xsl:value-of select="majutus/hind"/> €
-					</td>
-					<td>
-						<xsl:for-each select="ekskursioonid/ekskursioon">
-							<xsl:value-of select="nimi"/>
-							<xsl:if test="position() != last()">, </xsl:if>
-						</xsl:for-each>
-					</td>
-					<td>
-						<xsl:value-of select="sum(ekskursioonid/ekskursioon/hind)"/> €
-					</td>
-					<td>
-						<xsl:value-of select="muudKulud/kirjeldus"/>
-					</td>
-					<td>
-						<xsl:value-of select="muudKulud/hind"/> €
-					</td>
-					<td>
-						<xsl:value-of select="reisihind"/> €
-					</td>
-					<!-- Ülesanne 5 -->
-					<td>
-						<strong>
-							<xsl:value-of select="reisihind + transport/hind + majutus/hind + sum(ekskursioonid/ekskursioon/hind) + muudKulud/hind"/> €
-						</strong>
-					</td>
-					<td>
-						<xsl:value-of select="hinnang"/>
-					</td>
-				</tr>
-			</xsl:for-each>
-		</table>
+	
 	</xsl:template>
 </xsl:stylesheet>
