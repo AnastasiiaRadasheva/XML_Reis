@@ -33,10 +33,10 @@
 				<tr>
 					<!-- Ülesanne 9 -->
 					<xsl:if test="position() mod 2 = 1">
-						<xsl:attribute name="style">background-color:lightblue;</xsl:attribute>
+						<xsl:attribute name="style">background-color:#4682b4;</xsl:attribute>
 					</xsl:if>
 					<xsl:if test="position() mod 2 = 0">
-						<xsl:attribute name="style">background-color:lightgreen;</xsl:attribute>
+						<xsl:attribute name="style">background-color:#8fbc8f;</xsl:attribute>
 					</xsl:if>
 					<td>
 						<xsl:value-of select="position()"/>
