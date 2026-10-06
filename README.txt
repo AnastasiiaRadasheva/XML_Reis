@@ -1,3 +1,4 @@
+никита не воруй
 Lokaalselt:  dotnet run   (http://localhost:5077)
 Lehed:
   /Reisid     Reisid      -> reisid.xml            + reisid.xslt   (XML Reisid ülesanne)
