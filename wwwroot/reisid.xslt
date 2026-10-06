@@ -73,6 +73,7 @@
 					</td>
 					<td>
 						<xsl:value-of select="muudKulud/kirjeldus"/>
+						
 					</td>
 					<td>
 						<xsl:value-of select="muudKulud/hind"/> €
@@ -195,7 +196,7 @@
 			<!-- Ülesanne 6 -->
 			<xsl:for-each select="reisid/reis[starts-with(transport/liik, 'lennu')]">
 				<!-- Ülesanne 7 -->
-				<xsl:sort select="suund/kestvus" data-type="number" order="descending"/>
+				<xsl:sort select="suund/kestvus" order="descending"/>
 				<li>
 					<strong>
 						<xsl:value-of select="suund/riik"/>
@@ -206,7 +207,8 @@
 				</li>
 			</xsl:for-each>
 		</ul>
-
 	
+
+
 	</xsl:template>
 </xsl:stylesheet>
